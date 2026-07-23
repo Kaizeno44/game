@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="vi">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MYE - Tài Khoản Của Tôi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <!-- Link file CSS dùng chung và CSS riêng cho trang Tài khoản -->
+    <link rel="stylesheet" href="css/taikhoan.css">
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header class="topbar">
+        <div class="container-main nav-wrap">
+            <img class="logo" src="images/logo.png" alt="myE">
+            <button class="mobile-toggle"><i class="bi bi-list"></i></button>
+            <ul class="menu">
+                <li><a href="index.html">Trang Chủ</a></li>
+                <li><a href="games.html">Trò Chơi</a></li>
+                <li><a href="napgame.html">Nạp Game</a></li>
+                <li><a href="#">Tin Tức</a></li>
+                <li><a href="#">Hỗ Trợ</a></li>
+            </ul>
+            
+            <!-- Widget User (Thay thế nút Đăng nhập) -->
+            <div class="header-user-widget">
+                <img src="images/avatar.png" alt="User" class="widget-avatar">
+                <div class="widget-info">
+                    <span class="widget-name">myepro123</span>
+                    <span class="widget-coin"><img src="images/coin.png" alt="coin"> 1200</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO BANNER TÀI KHOẢN -->
+    <section class="profile-hero">
+        <div class="container-main profile-hero-inner">
+            <!-- Thông tin cá nhân -->
+            <div class="profile-info-wrap">
+                <div class="profile-avatar-large">
+                    <img src="images/avatar.png" alt="Nguyễn Văn A">
+                </div>
+                <div class="profile-details">
+                    <h2>Nguyễn Văn A</h2>
+                    <p><i class="bi bi-person-fill"></i> Tài khoản: fb.112314335</p>
+                    <p><i class="bi bi-fingerprint"></i> MYE ID: 11233548</p>
+                    <p><i class="bi bi-calendar-event"></i> Ngày tạo tài khoản: 19/04/2026</p>
+                </div>
+            </div>
+            
+            <!-- Nút điều hướng -->
+            <div class="profile-nav-btns">
+                <a href="#" class="btn-profile-nav active">Tài khoản</a>
+                <a href="#" class="btn-profile-nav">Bảo mật</a>
+                <a href="#" class="btn-profile-nav">Lịch sử giao dịch</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- MAIN CONTENT -->
+    <main class="profile-content container-main">
+        
+        <!-- BẢO MẬT (Security Level) -->
+        <section class="security-level-section">
+            <div class="security-circle">
+                <!-- Vòng tròn hiển thị % (Điều khiển % qua CSS) -->
+                <div class="progress-ring" data-percent="20">
+                    <div class="progress-inner">20%</div>
+                </div>
+            </div>
+            <div class="security-text">
+                <h3>Mức độ bảo mật</h3>
+                <p>Tài khoản của bạn hiện tại có thể bị đe dọa bảo mật, hãy hoàn thiện các thông tin bên dưới.</p>
+            </div>
+        </section>
+
+        <!-- TIÊU ĐỀ SECTION -->
+        <div class="section-title-wrap">
+            <h2 class="sub-section-title">Thông tin tài khoản</h2>
+            <p>Bạn có thể cập nhật, tải lên công khai của mình tại đây và thông tin sẽ tự động đồng bộ tất cả các tài khoản Game đã được kết nối.</p>
+        </div>
+
+        <!-- CARD 1: THÔNG TIN CÁ NHÂN -->
+        <div class="acc-card">
+            <div class="acc-card-header">
+                <div class="card-title-left">
+                    <img src="images/avatar.png" class="title-icon" alt="Icon">
+                    <div class="title-text-group">
+                        <h3>Thông tin cá nhân</h3>
+                        <span class="status-warning">Chưa hoàn thiện</span>
+                    </div>
+                </div>
+                <button class="btn-edit-outline">Chỉnh Sửa</button>
+            </div>
+            
+            <div class="acc-card-body">
+                <div class="info-row">
+                    <div class="info-label"><i class="bi bi-person-fill"></i> Họ và tên</div>
+                    <div class="info-val">Nguyễn Văn A</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label"><i class="bi bi-gender-ambiguous"></i> Giới tính</div>
+                    <div class="info-val">Nam</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label"><i class="bi bi-calendar-event"></i> Ngày sinh</div>
+                    <div class="info-val">01/01/1999</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label"><i class="bi bi-geo-alt-fill"></i> Địa chỉ</div>
+                    <div class="info-val">TP Hồ Chí Minh</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label"><i class="bi bi-envelope-fill"></i> Email</div>
+                    <div class="info-val">comxxx@gmail.com <i class="bi bi-check-circle-fill text-success ms-2"></i></div>
+                </div>
+                <div class="info-row border-0 pb-0">
+                    <div class="info-label"><i class="bi bi-telephone-fill"></i> Số điện thoại</div>
+                    <div class="info-val text-muted d-flex align-items-center justify-content-between w-100">
+                        Chưa có số điện thoại
+                        <button class="btn-edit-outline" style="padding: 5px 15px; font-size: 13px;">Liên kết xác thực</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CARD 2: ĐỒNG BỘ TÀI KHOẢN (TRẠNG THÁI MỞ RỘNG) -->
+        <div class="acc-card mt-4">
+            <div class="acc-card-header border-0 pb-0 cursor-pointer">
+                <div class="card-title-left">
+                    <img src="images/avatar.png" class="title-icon" alt="Icon">
+                    <h3>Đồng bộ tài khoản</h3>
+                </div>
+                <!-- Đổi icon mũi tên hướng sang phải thành hướng xuống dưới -->
+                <i class="bi bi-chevron-down fs-4 text-muted"></i>
+            </div>
+            
+            <div class="acc-card-body pt-3">
+                <!-- Tài khoản hiện tại -->
+                <p class="fw-bold mb-2 text-dark">Tài khoản hiện tại</p>
+                <div class="current-account-box mb-4">
+                    <div class="d-flex align-items-center gap-3">
+                        <img src="images/fb-icon.png" class="sync-icon" alt="FB" style="width: 32px; height: 32px;">
+                        <span class="fw-bold text-dark">Nguyễn Văn A</span>
+                    </div>
+                    <span class="text-muted">fb.451322</span>
+                </div>
+
+                <!-- Form tạo tài khoản đồng bộ -->
+                <p class="fw-bold mb-1 text-dark">Đồng bộ tài khoản MYE</p>
+                <p class="text-muted small mb-3">Vui lòng tạo tên đăng nhập và mật khẩu để đồng bộ tài khoản hiện tại vào hệ thống MYE.</p>
+
+                <form class="sync-form">
+                    <div class="mb-3">
+                        <label class="form-label fw-semibold text-dark small">Tên đăng nhập MYE</label>
+                        <input type="text" class="form-control" placeholder="Tên đăng nhập MYE">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label fw-semibold text-dark small">Tạo mật khẩu</label>
+                        <input type="password" class="form-control" placeholder="Mật khẩu của bạn">
+                    </div>
+                    <div class="mb-4">
+                        <label class="form-label fw-semibold text-dark small">Xác nhận lại mật khẩu</label>
+                        <input type="password" class="form-control" placeholder="Xác nhận lại mật khẩu">
+                    </div>
+                    <button type="button" class="btn btn-confirm-sync w-100 fw-bold py-2">Xác nhận đồng bộ</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- CARD 3: LỊCH SỬ HOẠT ĐỘNG -->
+        <div class="acc-card mt-4 mb-5">
+            <div class="acc-card-header border-0 pb-0 pt-1 cursor-pointer">
+                <div class="card-title-left">
+                    <img src="images/avatar.png" class="title-icon" alt="Icon">
+                    <h3>Lịch sử hoạt động</h3>
+                </div>
+                <i class="bi bi-chevron-right fs-4 text-muted"></i>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <img src="images/logo.png" alt="myE">
+        <p>Email: hotro@mye.vn</p>
+        <p>Hotline: 0902 500 198</p>
+        <p><b>CÔNG TY CỔ PHẦN MYE</b></p>
+        <p>Chịu trách nhiệm quản lí nội dung: Ông Lâm Trung Hiệp</p>
+        <p>Địa chỉ: 477/22 Âu Cơ, Phường Phú Trung, Quận Tân Phú, Thành phố Hồ Chí Minh, Việt Nam</p>
+        <p>Giấy phép G1 số: Số 297/GP-BTTTT. Ngày cấp 14/07/2020, Nơi cấp Bộ Thông Tin Và Truyền Thông</p>
+        <p>Điều khoản dịch vụ | Chính sách bảo mật</p>
+        <p>©Copyright © 2026 MYE. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

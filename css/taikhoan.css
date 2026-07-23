@@ -1,0 +1,484 @@
+:root {
+    --blue: #093a88;
+    --orange: #ff7900;
+    --text: #282828;
+    --shadow: 0 4px 12px rgba(0, 0, 0, .28);
+    --hero-bg: #091334;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    font-family: Montserrat, Arial, sans-serif;
+    color: var(--text);
+    background: #fff;
+}
+
+.container-main { max-width: 1100px; margin: auto; } /* Thu hẹp lại chút cho đẹp form chữ */
+
+/* ==================== HEADER (CẬP NHẬT WIDGET USER) ==================== */
+.topbar { height: 120px; background: #fff; display: flex; align-items: center; border-bottom: 1px solid #eee; }
+.nav-wrap { display: flex; align-items: center; justify-content: space-between; width: 100%; max-width: 1320px; margin: auto;}
+.logo { width: 120px; margin-right: 60px; }
+
+.menu { display: flex; gap: 55px; margin: 0; padding: 0; list-style: none; }
+.menu a { font-size: 24px; line-height: 24px; color: var(--blue); text-decoration: none; font-weight: 400; transition: color 0.3s ease; }
+.menu a:hover { color: var(--orange); }
+.menu a.active { color: var(--orange); font-weight: 700; border-bottom: 3px solid var(--orange); padding-bottom: 10px; }
+
+/* Thay thế nút đăng nhập bằng Widget */
+.header-user-widget {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #eef3ff;
+    padding: 8px 25px 8px 8px;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.header-user-widget:hover { box-shadow: 0 4px 15px rgba(9, 58, 136, 0.15); transform: translateY(-2px); }
+.widget-avatar { width: 42px; height: 42px; border-radius: 50%; object-fit: cover; }
+.widget-info { display: flex; flex-direction: column; }
+.widget-name { font-size: 13px; font-weight: 700; color: var(--blue); }
+.widget-coin { font-size: 13px; font-weight: 700; color: var(--orange); display: flex; align-items: center; gap: 4px; }
+.widget-coin img { width: 16px; }
+
+/* ==================== HERO BANNER TÀI KHOẢN ==================== */
+.profile-hero {
+    background: var(--hero-bg) url('../images/bannernapthe.png') center/cover no-repeat; /* Bạn có thể chèn hình nền tùy thích */
+    position: relative;
+    padding: 40px 0;
+}
+/* Lớp phủ cho tối lại chút nếu ảnh nền sáng */
+.profile-hero::before { content: ""; position: absolute; inset: 0; background: rgba(6, 17, 44, 0.85); z-index: 1; }
+
+.profile-hero-inner {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.profile-info-wrap {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.profile-avatar-large {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background: #00d2ff; /* Màu nền vòng ngoài avatar */
+    padding: 6px;
+    box-shadow: 0 0 20px rgba(0, 210, 255, 0.4);
+}
+.profile-avatar-large img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    background: #fff;
+}
+
+.profile-details h2 { color: #fff; font-size: 26px; font-weight: 700; margin-bottom: 12px; text-transform: uppercase; }
+.profile-details p { color: #c0c8e4; font-size: 14px; margin: 5px 0; display: flex; align-items: center; gap: 10px; }
+.profile-details p i { color: #fff; font-size: 16px; }
+
+.profile-nav-btns { display: flex; gap: 15px; }
+.btn-profile-nav {
+    border: 1px solid rgba(255,255,255,0.3);
+    background: rgba(255,255,255,0.05);
+    color: #fff;
+    padding: 8px 24px;
+    border-radius: 999px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+.btn-profile-nav:hover { background: rgba(255,255,255,0.15); color: #fff; }
+.btn-profile-nav.active { background: #1c52b8; border-color: #1c52b8; }
+
+/* ==================== MỨC ĐỘ BẢO MẬT (PROGRESS RING) ==================== */
+.profile-content { padding: 40px 0 80px; }
+
+.security-level-section {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 50px;
+}
+/* CSS Vòng Tròn Phần Trăm */
+.security-circle { position: relative; }
+.progress-ring {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    /* Góc phần cam (20%), phần xám (80%) */
+    background: conic-gradient(var(--orange) 20%, #e9ecef 20%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.progress-inner {
+    width: 86px;
+    height: 86px;
+    background: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--orange);
+}
+.security-text h3 { font-size: 20px; color: var(--blue); font-weight: 700; margin-bottom: 8px; }
+.security-text p { font-size: 14px; color: #666; margin: 0; }
+
+/* ==================== TIÊU ĐỀ & THẺ CARD ==================== */
+.section-title-wrap { margin-bottom: 30px; }
+.sub-section-title { font-size: 24px; font-weight: 700; color: var(--blue); margin-bottom: 10px; }
+.section-title-wrap p { font-size: 14px; color: #666; }
+
+.acc-card {
+    border: 1px solid #eaeaea;
+    border-radius: 12px;
+    padding: 25px 35px;
+    background: #fff;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+}
+.acc-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eaeaea;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+.cursor-pointer { cursor: pointer; }
+
+.card-title-left { display: flex; align-items: center; gap: 15px; }
+.title-icon { width: 45px; height: 45px; border-radius: 50%; background: #00d2ff; padding: 2px; }
+.title-text-group h3 { font-size: 18px; font-weight: 700; color: var(--blue); margin: 0 0 5px 0; }
+.status-warning { font-size: 12px; color: #dc3545; font-weight: 500; }
+.card-title-left h3 { font-size: 18px; font-weight: 700; color: var(--blue); margin: 0; } /* Cho card không có warning */
+
+.btn-edit-outline {
+    border: 1px solid var(--orange);
+    color: var(--orange);
+    background: transparent;
+    padding: 8px 25px;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.3s;
+}
+.btn-edit-outline:hover { background: var(--orange); color: #fff; }
+
+/* ==================== HÀNG THÔNG TIN CÁ NHÂN ==================== */
+.info-row {
+    display: flex;
+    align-items: center;
+    padding: 18px 0;
+    border-bottom: 1px solid #f5f5f5;
+}
+.info-label {
+    width: 250px;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--blue);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.info-label i { font-size: 18px; color: #a0a8b8; }
+.info-val { flex: 1; font-size: 15px; color: #333; font-weight: 500; }
+
+/* ==================== ĐỒNG BỘ TÀI KHOẢN ==================== */
+.sync-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #eaeaea;
+    border-radius: 12px;
+    padding: 20px 30px;
+}
+.sync-item { display: flex; align-items: center; gap: 15px; width: 250px; }
+.sync-icon { width: 40px; height: 40px; }
+.sync-icon-placeholder {
+    width: 40px; height: 40px; border-radius: 50%;
+    background: #e9ecef; display: flex; align-items: center; justify-content: center;
+    color: #999; font-size: 20px;
+}
+.sync-name { font-size: 15px; font-weight: 700; color: var(--text); }
+.sync-id { font-size: 13px; color: #888; }
+.sync-arrows i { font-size: 24px; color: #d4d4d4; }
+
+.badge-not-sync {
+    background: #ffe3e3;
+    color: #dc3545;
+    padding: 8px 20px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/* ==================== FOOTER ==================== */
+footer { background: #e9e9e9; text-align: center; padding: 54px 20px 42px; }
+footer img { width: 190px; margin-bottom: 24px; }
+footer p { margin: 4px 0; font-size: 14px; }
+.mobile-toggle { display: none; }
+
+
+/* ==================== LỊCH SỬ HOẠT ĐỘNG (BẢNG DỮ LIỆU) ==================== */
+.warning-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #eaeaea;
+    border-radius: 8px;
+    padding: 20px;
+    background: #fff;
+}
+
+/* Chia layout bảng bằng CSS Grid để các cột tự động thẳng hàng */
+.activity-header {
+    display: grid;
+    grid-template-columns: 1.5fr 1.5fr 1.5fr 1fr;
+    font-weight: 700;
+    font-size: 13px;
+    color: #333;
+    border-bottom: 2px solid var(--orange);
+    padding-bottom: 12px;
+    margin-bottom: 10px;
+}
+
+.activity-row {
+    display: grid;
+    grid-template-columns: 1.5fr 1.5fr 1.5fr 1fr;
+    align-items: center;
+    font-size: 13px;
+    padding: 15px 0;
+    border-bottom: 1px solid #f5f5f5;
+}
+
+/* RESPONSIVE CƠ BẢN */
+@media(max-width: 992px) {
+    .profile-hero-inner { flex-direction: column; align-items: flex-start; gap: 30px; }
+    .sync-box { flex-direction: column; gap: 20px; align-items: flex-start; }
+    .sync-arrows { transform: rotate(90deg); align-self: center; }
+    .sync-status { width: 100%; text-align: center; margin-top: 15px; }
+}
+@media(max-width: 768px) {
+    .info-row { flex-direction: column; align-items: flex-start; gap: 10px; }
+    .info-label { width: 100%; }
+    .acc-card { padding: 20px 15px; }
+    .acc-card-header { flex-direction: column; align-items: flex-start; gap: 15px; }
+    .btn-edit-outline { width: 100%; text-align: center; }
+    /* Tối ưu bảng Lịch sử hoạt động trên Mobile */
+    .warning-box { flex-direction: column; align-items: flex-start; gap: 15px; }
+    .warning-box button { width: 100%; margin-left: 0 !important; }
+    .activity-header { display: none; /* Ẩn tiêu đề cột ngang trên mobile */ }
+    .activity-row { 
+        grid-template-columns: 1fr; 
+        gap: 10px; 
+        background: #fafafa; 
+        padding: 15px; 
+        border-radius: 8px; 
+        margin-bottom: 10px; 
+        border: 1px solid #eee;
+    }
+}
+
+
+
+/* ==================== FORM ĐỒNG BỘ TÀI KHOẢN MỞ RỘNG ==================== */
+.current-account-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #eaeaea;
+    border-radius: 8px;
+    padding: 15px 20px;
+    background: #fff;
+}
+
+.sync-form .form-control {
+    border-radius: 6px;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    box-shadow: none;
+    background: #fff;
+}
+.sync-form .form-control::placeholder {
+    color: #a0a8b8;
+}
+.sync-form .form-control:focus {
+    border-color: var(--blue);
+    box-shadow: 0 0 0 0.2rem rgba(9, 58, 136, 0.1);
+}
+.sync-form .form-label {
+    margin-bottom: 6px;
+    font-size: 13px;
+}
+
+.btn-confirm-sync {
+    background-color: var(--blue);
+    border-color: var(--blue);
+    color: #fff;
+    border-radius: 6px;
+    transition: all 0.3s;
+}
+.btn-confirm-sync:hover {
+    background-color: #072a63; /* Màu xanh đậm hơn khi hover */
+    color: #fff;
+}
+
+
+/* ==================== TRẠNG THÁI ĐÃ ĐỒNG BỘ (SUCCESS) ==================== */
+.sync-box-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #eaeaea;
+    border-radius: 8px;
+    padding: 15px 20px;
+    background: #fff;
+}
+
+.sync-user-icon {
+    width: 32px;
+    height: 32px;
+    background: #eef3ff;
+    color: var(--blue);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+}
+
+/* Đường kẻ gạch đứt ở giữa 2 thẻ */
+.sync-divider {
+    position: relative;
+    text-align: center;
+    margin: 20px 0;
+}
+.sync-divider::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    border-top: 1px dashed #d4d4d4;
+    z-index: 1;
+}
+
+/* Nút "Đã đồng bộ" ở giữa đường kẻ */
+.sync-badge {
+    position: relative;
+    z-index: 2;
+    background: #d1f0d9; /* Nền xanh lá nhạt */
+    color: #178a3c;      /* Chữ xanh lá đậm */
+    padding: 4px 24px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+/* Khung thông báo thành công */
+.sync-alert {
+    background: #dceada; /* Nền xanh lá rất nhạt */
+    color: #178a3c;      /* Chữ xanh lá đậm đồng bộ */
+    border-radius: 8px;
+    padding: 12px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.sync-alert i {
+    font-size: 16px;
+}
+
+
+/* ==================== ĐỒNG BỘ TÀI KHOẢN (ĐÃ ĐỒNG BỘ - THU GỌN) ==================== */
+
+/* Icon user màu xanh cho tài khoản MYE */
+.sync-user-icon {
+    width: 40px; 
+    height: 40px; 
+    border-radius: 50%;
+    background: #eef3ff; 
+    color: var(--blue);
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    font-size: 20px;
+}
+
+/* Nút báo trạng thái thành công màu xanh lá */
+.badge-synced {
+    background: #d1f0d9;
+    color: #178a3c;
+    padding: 8px 20px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+
+/* ==================== TRẠNG THÁI CHỈNH SỬA THÔNG TIN CÁ NHÂN ==================== */
+
+/* Nút Hủy */
+.btn-cancel-outline {
+    border: 1px solid var(--blue);
+    color: var(--blue);
+    background: transparent;
+    padding: 6px 25px;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 13px;
+    transition: all 0.3s;
+}
+.btn-cancel-outline:hover {
+    background: var(--blue);
+    color: #fff;
+}
+
+/* Nút Lưu */
+.btn-save-solid {
+    border: 1px solid var(--orange);
+    background: var(--orange);
+    color: #fff;
+    padding: 6px 25px;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 13px;
+    transition: all 0.3s;
+}
+.btn-save-solid:hover {
+    background: #e06800;
+}
+
+/* Ô nhập liệu (Input Form) */
+.custom-input {
+    border-radius: 6px;
+    border: 1px solid #eaeaea;
+    padding: 10px 15px;
+    font-size: 14px;
+    color: #333;
+    box-shadow: none;
+    width: 100%;
+    max-width: 450px; /* Giới hạn chiều rộng để ô không quá dài giống thiết kế */
+    transition: all 0.3s;
+}
+.custom-input:focus {
+    border-color: var(--blue);
+    box-shadow: 0 0 0 0.2rem rgba(9, 58, 136, 0.1);
+}

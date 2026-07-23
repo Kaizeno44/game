@@ -238,3 +238,134 @@ footer p { margin: 4px 0; font-size: 14px; }
     
     footer { padding: 40px 16px 30px; }
 }
+
+
+/* ========================================================
+   TRANG CHI TIẾT: NẠP MYE COIN
+   ======================================================== */
+
+/* Breadcrumb */
+.breadcrumb-bar { padding: 15px 0; background: #fff; font-size: 14px; font-weight: 600; }
+.breadcrumb-bar a { color: var(--blue); text-decoration: none; }
+.breadcrumb-bar i { margin: 0 8px; color: #999; font-size: 12px; }
+.breadcrumb-bar span { color: var(--orange); }
+
+/* Khối thông tin tài khoản */
+.account-box {
+    display: flex; justify-content: space-around; align-items: center;
+    border: 1px solid #eaeaea; border-radius: 12px; padding: 25px 0;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03); background: #fff; margin-top: -10px;
+}
+.acc-item { display: flex; flex-direction: column; align-items: center; gap: 8px; flex: 1; }
+.acc-divider { width: 1px; height: 50px; background: #eaeaea; }
+.acc-label { color: var(--blue); font-weight: 700; font-size: 16px; }
+.acc-val { color: var(--text); font-size: 16px; display: flex; align-items: center; gap: 5px; }
+.acc-coin { width: 20px; height: 20px; }
+
+/* Tiêu đề mục con */
+.sub-section-title { color: var(--blue); font-size: 24px; font-weight: 700; text-transform: uppercase; margin-bottom: 25px; }
+
+/* Chọn hình thức nạp (Grid 4 cột) */
+.payment-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.pay-item {
+    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 15px;
+    background: #fff; border: 2px solid #eaeaea; border-radius: 12px; padding: 20px 10px;
+    cursor: pointer; transition: all 0.3s ease; text-align: center; font-size: 14px; font-weight: 600; color: var(--text);
+}
+.pay-item img { height: 45px; object-fit: contain; }
+.pay-item:hover, .pay-item.active { border-color: var(--orange); box-shadow: 0 6px 15px rgba(255,121,0,0.15); color: var(--orange); }
+
+/* Chọn gói nạp (Grid 4 cột) */
+.package-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.pack-card { border: 1px solid #eaeaea; border-radius: 12px; overflow: hidden; background: #fff; box-shadow: 0 4px 12px rgba(0,0,0,0.05); transition: all 0.3s; }
+.pack-card:hover { border-color: var(--orange); transform: translateY(-5px); box-shadow: 0 8px 20px rgba(255,121,0,0.15); }
+.pack-img { width: 100%; height: auto; object-fit: cover; border-bottom: 1px solid #eaeaea; }
+.pack-info { padding: 15px; display: flex; justify-content: space-between; align-items: center; }
+.pack-text { display: flex; flex-direction: column; gap: 5px; }
+.pack-name { font-weight: 700; color: var(--blue); font-size: 14px; }
+.pack-price { color: var(--orange); font-size: 13px; font-weight: 600; }
+.buy-btn { background: var(--orange); color: #fff; border: none; border-radius: 6px; font-weight: 700; padding: 8px 18px; cursor: pointer; transition: all 0.3s; }
+.buy-btn:hover { background: #e06800; }
+
+/* Hướng dẫn & Tiện ích dưới cùng */
+.bottom-info-wrapper {
+    position: relative;
+    width: 85%; 
+    margin: 0 auto;
+}
+.guide-box {
+    border: 1px solid #eaeaea;
+    border-radius: 16px;
+    padding: 35px 40px;
+    margin-bottom: 25px;
+    background: #fff;
+}
+.guide-title { color: var(--blue); font-size: 20px; font-weight: 700; margin-bottom: 25px; text-transform: uppercase; }
+.guide-content { display: flex; gap: 40px; }
+.guide-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 15px; flex: 1; }
+.guide-list li { display: flex; align-items: flex-start; gap: 12px; font-size: 14px; color: var(--text); line-height: 1.5; }
+.step-num {
+    background: #eef3ff; color: var(--blue); width: 24px; height: 24px;
+    border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; flex-shrink: 0; font-size: 12px;
+}
+.sub-list { list-style: none; padding-left: 0; margin-top: 5px; display: flex; flex-direction: column; gap: 5px; color: #666; }
+
+.features-row {
+    display: flex; justify-content: space-between; border: 1px solid #eaeaea;
+    border-radius: 12px; padding: 25px 30px; background: #fff;
+}
+.feat-item { display: flex; align-items: center; gap: 15px; flex: 1; border-right: 1px solid #eaeaea; }
+.feat-item:last-child { border-right: none; padding-left: 20px; }
+.feat-item:nth-child(2) { padding: 0 20px; }
+.feat-item img { width: 45px; height: 45px; object-fit: contain;}
+.feat-text-box h4 { font-size: 14px; font-weight: 700; margin: 0 0 5px 0; color: var(--blue); }
+.feat-text-box p { font-size: 12px; margin: 0; color: #666; line-height: 1.5; }
+.text-green { color: #00a651 !important; }
+
+/* ĐỊNH VỊ STICKER MỸ NỮ (MASCOT) */
+.guide-mascot {
+    position: absolute;
+    right: -45px;    
+    bottom: -15px;   
+    width: 260px;    
+    z-index: 10;
+    pointer-events: none; 
+}
+
+/* ==================== FOOTER ==================== */
+footer { background: #e9e9e9; text-align: center; padding: 54px 20px 42px; }
+footer img { width: 190px; margin-bottom: 24px; }
+footer p { margin: 4px 0; font-size: 14px; }
+.mobile-toggle { display: none; }
+
+/* ==================== RESPONSIVE ==================== */
+@media(max-width: 1200px) {
+    .container-main { padding: 0 24px; }
+    .payment-grid, .package-grid { grid-template-columns: repeat(3, 1fr); }
+    .bottom-info-wrapper { width: 95%; }
+}
+@media(max-width: 992px) {
+    .payment-grid, .package-grid { grid-template-columns: repeat(2, 1fr); }
+    .bottom-info-wrapper { width: 100%; }
+    .guide-content { flex-direction: column; gap: 20px; }
+    .features-row { flex-direction: column; gap: 20px; padding: 20px; }
+    .feat-item { border-right: none; padding: 0 !important; border-bottom: 1px solid #eaeaea; padding-bottom: 15px !important; }
+    .feat-item:last-child { border-bottom: none; padding-bottom: 0 !important; }
+    .guide-mascot { display: none; }
+}
+@media(max-width: 768px) {
+    .topbar { height: auto; padding: 16px 0; }
+    .nav-wrap { flex-wrap: wrap; }
+    .logo { width: 100px; order: 1; }
+    .login-btn { order: 2; margin-left: auto; padding: 8px 18px; font-size: 14px; }
+    .mobile-toggle { display: block; border: 0; background: #fff; font-size: 28px; color: var(--blue); order: 3; padding: 0; margin-left: 15px;}
+    .menu { display: none; width: 100%; flex-direction: column; gap: 15px; padding: 20px 0 10px; order: 4; }
+    .menu.open { display: flex; }
+    .menu a { font-size: 18px; padding: 6px 0; display: block; }
+    .menu a.active { border-bottom: none; border-left: 3px solid var(--orange); padding-left: 10px; padding-bottom: 6px; }
+
+    .topup-banner { height: 220px; }
+    .history-btn { right: 20px; bottom: 20px; padding: 8px 20px; font-size: 13px; }
+    .payment-grid, .package-grid { grid-template-columns: 1fr; }
+    footer { padding: 40px 16px 30px; }
+}
