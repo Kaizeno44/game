@@ -1,0 +1,240 @@
+:root {
+    --blue: #093a88;
+    --orange: #ff7900;
+    --text: #282828;
+    --shadow: 0 4px 12px rgba(0, 0, 0, .28)
+}
+
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    font-family: Montserrat, Arial, sans-serif;
+    color: var(--text);
+    background: #fff;
+}
+
+.container-main { max-width: 1320px; margin: auto; }
+.section-spacing { margin-top: 50px; }
+.text-orange { color: var(--orange) !important; }
+
+/* ==================== HEADER ==================== */
+.topbar { height: 120px; background: #fff; display: flex; align-items: center; border-bottom: 1px solid #eee; }
+.nav-wrap { display: flex; align-items: center; justify-content: space-between; width: 100%; }
+.logo { width: 120px; margin-right: 60px; }
+
+.menu { display: flex; gap: 55px; margin: 0; padding: 0; list-style: none; }
+.menu a { font-size: 24px; line-height: 24px; color: var(--blue); text-decoration: none; font-weight: 400; transition: color 0.3s ease; }
+.menu a:hover { color: var(--orange); }
+.menu a.active { color: var(--orange); font-weight: 700; border-bottom: 3px solid var(--orange); padding-bottom: 10px; }
+
+.login-btn {
+    background: linear-gradient(#ffab48, #ff7300);
+    border: 0; border-radius: 999px; color: #fff; font-weight: 800;
+    padding: 12px 28px; margin-left: 40px; cursor: pointer; transition: all 0.3s ease;
+}
+.login-btn:hover { background: linear-gradient(#ffbc65, #ff851a); box-shadow: 0 4px 15px rgba(255, 121, 0, 0.4); transform: translateY(-2px); }
+
+/* ==================== 1. KHU VỰC HERO BANNER ==================== */
+.topup-wrapper {
+    background: #02091c; /* Nền xanh đen đậm đồng bộ với banner */
+    padding: 30px 0;
+    width: 100%;
+}
+.topup-banner {
+    width: 100%;
+    /* XÓA height: 380px; và thay bằng tỷ lệ aspect-ratio. 
+       Banner sẽ tự động co giãn chiều cao theo chiều rộng chuẩn xác */
+    aspect-ratio: 24 / 7; /* Bạn có thể tăng số 7 lên 8 hoặc 9 nếu muốn ảnh cao hơn nữa */
+    border-radius: 16px;
+    border: 1px solid #1a3c87;
+    background-size: cover;
+    background-position: top center; /* Quan trọng: Ưu tiên canh từ đỉnh ảnh xuống để không bao giờ mất đầu nhân vật */
+    background-repeat: no-repeat;
+    position: relative;
+    box-shadow: 0 0 40px rgba(9, 58, 136, 0.4); 
+}
+.history-btn {
+    position: absolute;
+    bottom: 20px;
+    right: 40px;
+    background: rgba(4, 15, 40, 0.6);
+    border: 1px solid #486ed3;
+    border-radius: 999px;
+    color: #fff;
+    padding: 10px 28px;
+    font-weight: 600;
+    font-size: 15px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+.history-btn:hover {
+    background: var(--blue);
+    border-color: #fff;
+    box-shadow: 0 0 15px rgba(255,255,255,0.3);
+}
+
+/* ==================== 2. KHU VỰC DANH SÁCH GAME ==================== */
+.section-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 30px; }
+.section-title { font-size: 36px; font-weight: 700; color: var(--blue); text-transform: uppercase; margin: 0; }
+
+/* Ô Tìm Kiếm */
+.search-box { position: relative; width: 300px; }
+.search-box input {
+    width: 100%; height: 46px; border-radius: 23px; border: 1px solid #d4d4d4;
+    padding: 0 20px 0 45px; font-family: inherit; font-size: 15px; color: var(--text);
+    outline: none; transition: border 0.3s;
+}
+.search-box input:focus { border-color: var(--blue); box-shadow: 0 0 8px rgba(9,58,136,0.1); }
+.search-box i { position: absolute; left: 18px; top: 50%; transform: translateY(-50%); color: #888; font-size: 18px; }
+
+/* Bộ Lọc (Tái sử dụng) */
+.filter-row { display: flex; gap: 8px; margin-bottom: 40px; flex-wrap: wrap; }
+.filter {
+    height: 56px; border: 1px solid #cfcfcf; border-radius: 8px; background: #f8f8f8;
+    box-shadow: var(--shadow); display: inline-flex; align-items: center; justify-content: space-around;
+    padding: 0 20px; gap: 15px; font-size: 18px; font-weight: 700; cursor: pointer; transition: all 0.3s ease; color: var(--text);
+}
+.filter span:last-child {
+    width: 36px; height: 36px; border-radius: 50%; display: inline-flex;
+    align-items: center; justify-content: center; background: #e7e7e7; font-size: 14px;
+}
+.filter:hover, .filter.is-active { border-color: var(--orange); color: var(--orange); }
+.filter:hover span:last-child, .filter.is-active span:last-child { background: var(--orange); color: #fff; }
+
+
+/* Lưới Icon 5 Cột */
+.topup-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 40px 20px; /* Cách dòng 40px, cách cột 20px */
+}
+
+.topup-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+.topup-item:hover {
+    transform: translateY(-8px);
+}
+.topup-item h4 {
+    color: var(--text);
+    font-size: 15px;
+    font-weight: 700;
+    text-align: center;
+    margin: 0;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+.topup-item:hover h4 { color: var(--orange); }
+
+/* Vùng Icon Game */
+.topup-icon {
+    width: 170px;
+    height: 170px;
+    border-radius: 36px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    position: relative;
+    margin-bottom: 18px;
+    background: #fff; /* Tránh viền xấu nếu ảnh PNG trong suốt */
+    transition: all 0.3s ease;
+}
+.topup-item:hover .topup-icon {
+    box-shadow: 0 15px 35px rgba(255,121,0,0.3);
+}
+.topup-icon .main-icon {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 36px;
+}
+
+/* Nút MYE COIN Đặc biệt */
+.special-mye {
+    border: 3px solid var(--orange);
+    box-shadow: 0 10px 30px rgba(255,121,0,0.3);
+}
+
+/* Các Tag dán đè lên icon */
+.tag-top-left {
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    width: 38px;
+    z-index: 2;
+}
+.tag-bottom-right {
+    position: absolute;
+    bottom: -5px;
+    right: -5px;
+    width: 42px;
+    z-index: 2;
+}
+
+/* Dấu Chấm Phân Trang (Pagination) */
+.pagination-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-top: 50px;
+}
+.pagination-dots .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #d4d4d4;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.pagination-dots .dot.active {
+    background: var(--orange);
+    width: 36px;
+    border-radius: 6px; /* Kéo dài ra như hình viên thuốc */
+}
+.pagination-dots .dot:hover:not(.active) {
+    background: var(--blue);
+}
+
+/* ==================== FOOTER ==================== */
+footer { background: #e9e9e9; text-align: center; padding: 54px 20px 42px; }
+footer img { width: 190px; margin-bottom: 24px; }
+footer p { margin: 4px 0; font-size: 14px; }
+.mobile-toggle { display: none; }
+
+/* Responsive */
+@media(max-width: 1200px) {
+    .container-main { padding: 0 24px; }
+    .topup-grid { grid-template-columns: repeat(4, 1fr); }
+}
+@media(max-width: 992px) {
+    .topup-grid { grid-template-columns: repeat(3, 1fr); }
+    .topup-icon { width: 140px; height: 140px; border-radius: 28px; }
+    .section-head { flex-direction: column; align-items: flex-start; gap: 15px; }
+    .search-box { width: 100%; max-width: 400px; }
+}
+@media(max-width: 768px) {
+    .topbar { height: auto; padding: 16px 0; }
+    .nav-wrap { flex-wrap: wrap; }
+    .logo { width: 100px; order: 1; }
+    .login-btn { order: 2; margin-left: auto; padding: 8px 18px; font-size: 14px; }
+    .mobile-toggle { display: block; border: 0; background: #fff; font-size: 28px; color: var(--blue); order: 3; padding: 0; margin-left: 15px;}
+    .menu { display: none; width: 100%; flex-direction: column; gap: 15px; padding: 20px 0 10px; order: 4; }
+    .menu.open { display: flex; }
+    .menu a { font-size: 18px; padding: 6px 0; display: block; }
+    .menu a.active { border-bottom: none; border-left: 3px solid var(--orange); padding-left: 10px; padding-bottom: 6px; }
+
+    .topup-banner { height: 220px; }
+    .history-btn { right: 20px; bottom: 20px; padding: 8px 20px; font-size: 13px; }
+    
+    .topup-grid { grid-template-columns: repeat(2, 1fr); gap: 25px 15px; }
+    .topup-icon { width: 120px; height: 120px; border-radius: 24px; }
+    .topup-item h4 { font-size: 13px; }
+    .filter-row { overflow-x: auto; flex-wrap: nowrap; padding-bottom: 10px; }
+    .filter { flex: 0 0 auto; height: 48px; padding: 0 15px; font-size: 14px; }
+    
+    footer { padding: 40px 16px 30px; }
+}

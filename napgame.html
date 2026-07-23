@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="vi">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MYE - Nạp Game</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <!-- Link file CSS dùng chung và CSS riêng cho trang Nạp Game -->
+    <link rel="stylesheet" href="css/napgame.css">
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header class="topbar">
+        <div class="container-main nav-wrap">
+            <img class="logo" src="images/logo.png" alt="myE">
+            <button class="mobile-toggle"><i class="bi bi-list"></i></button>
+            <ul class="menu">
+                <li><a href="index.html">Trang Chủ</a></li>
+                <li><a href="games.html">Trò Chơi</a></li>
+                <!-- Chuyển class active sang Nạp Game -->
+                <li><a class="active" href="napgame.html">Nạp Game</a></li>
+                <li><a href="#">Tin Tức</a></li>
+                <li><a href="#">Hỗ Trợ</a></li>
+            </ul>
+            <button class="login-btn">ĐĂNG NHẬP</button>
+        </div>
+    </header>
+
+    <!-- SECTION 1: HERO BANNER (NỀN XANH ĐEN) -->
+    <section class="topup-wrapper">
+        <div class="container-main">
+            <!-- Banner Nạp Game (Thay đường dẫn ảnh background thực tế của bạn vào đây) -->
+            <div class="topup-banner" style="background-image: url('images/bannernapthe.png');">
+                <a href="#" class="history-btn">Lịch sử giao dịch</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2: DANH SÁCH GAME NẠP -->
+    <section class="topup-games container-main section-spacing" style="margin-bottom: 80px;">
+        
+        <!-- Tiêu đề & Ô Tìm Kiếm -->
+        <div class="section-head">
+            <h2 class="section-title">Danh sách game</h2>
+            <div class="search-box">
+                <i class="bi bi-search"></i>
+                <input type="text" placeholder="Tìm kiếm game...">
+            </div>
+        </div>
+
+        <!-- Bộ lọc -->
+        <div class="filter-row">
+            <button class="filter is-active" data-filter="TẤT CẢ"><b>TẤT CẢ</b><span>60</span></button>
+            <button class="filter" data-filter="SIMULATION"><b>SIMULATION</b><span>4</span></button>
+            <button class="filter" data-filter="ACTION"><b>ACTION</b><span>11</span></button>
+            <button class="filter" data-filter="RPG"><b>RPG</b><span>37</span></button>
+            <button class="filter" data-filter="SHOOTING"><b>SHOOTING</b><span>5</span></button>
+            <button class="filter" data-filter="RACING"><b>RACING</b><span>1</span></button>
+        </div>
+
+        <!-- Lưới Icon Game (5 Cột) -->
+        <div class="topup-grid">
+            
+            <!-- Item 1: MYE COIN (Đặc biệt) -->
+            <a href="#" class="topup-item">
+                <div class="topup-icon special-mye">
+                    <img src="images/myepoint.png" alt="MYE Coin" class="main-icon">
+                </div>
+                <h4 class="text-orange">MYE COIN</h4>
+            </a>
+
+            <!-- Các Item Game còn lại -->
+            <a href="#" class="topup-item">
+                <div class="topup-icon">
+                    <img src="images/hkch2.png" alt="Hào Khí Chiến Hồn" class="main-icon">
+                </div>
+                <h4>HÀO KHÍ CHIẾN HỒN</h4>
+            </a>
+            
+            <a href="#" class="topup-item">
+                <div class="topup-icon">
+                    <img src="images/hkdh2.png" alt="Hào Khí Du Hiệp" class="main-icon">
+                </div>
+                <h4>HÀO KHÍ DU HIỆP</h4>
+            </a>
+
+            <a href="#" class="topup-item">
+                <div class="topup-icon">
+                    <img src="images/boom2.png" alt="Boom Tank" class="main-icon">
+                </div>
+                <h4>BOOM TANK</h4>
+            </a>
+
+            <a href="#" class="topup-item">
+                <div class="topup-icon">
+                    <img src="images/chanvuong.png" alt="Chân Vương" class="main-icon">
+                </div>
+                <h4>CHÂN VƯƠNG</h4>
+            </a>
+
+            <!-- Lặp lại Hàng 2 -->
+            <a href="#" class="topup-item">
+                <div class="topup-icon">
+                    <img src="images/boom2.png" alt="Boom Tank" class="main-icon">
+
+                </div>
+                <h4>BOOM TANK</h4>
+            </a>
+            <a href="#" class="topup-item">
+                <div class="topup-icon">
+                    <img src="images/hkch2.png" alt="Hào Khí Chiến Hồn" class="main-icon">
+
+                </div>
+                <h4>HÀO KHÍ CHIẾN HỒN</h4>
+            </a>
+            <a href="#" class="topup-item">
+                <div class="topup-icon">
+                    <img src="images/hkdh2.png" alt="Hào Khí Du Hiệp" class="main-icon">
+                </div>
+                <h4>HÀO KHÍ DU HIỆP</h4>
+            </a>
+            <a href="#" class="topup-item">
+                <div class="topup-icon">
+                    <img src="images/boom2.png" alt="Boom Tank" class="main-icon">
+
+                </div>
+                <h4>BOOM TANK</h4>
+            </a>
+            <a href="#" class="topup-item">
+                <div class="topup-icon">
+                    <img src="images/chanvuong.png" alt="Chân Vương" class="main-icon">
+
+                </div>
+                <h4>CHÂN VƯƠNG</h4>
+            </a>
+
+            <!-- Lặp lại Hàng 3 -->
+            <a href="#" class="topup-item">
+                <div class="topup-icon">
+                    <img src="images/boom2.png" alt="Boom Tank" class="main-icon">
+
+                </div>
+                <h4>BOOM TANK</h4>
+            </a>
+            <a href="#" class="topup-item">
+                <div class="topup-icon">
+                    <img src="images/hkch2.png" alt="Hào Khí Chiến Hồn" class="main-icon">
+
+                </div>
+                <h4>HÀO KHÍ CHIẾN HỒN</h4>
+            </a>
+            <a href="#" class="topup-item">
+                <div class="topup-icon">
+                    <img src="images/hkdh2.png" alt="Hào Khí Du Hiệp" class="main-icon">
+ 
+                </div>
+                <h4>HÀO KHÍ DU HIỆP</h4>
+            </a>
+            <a href="#" class="topup-item">
+                <div class="topup-icon">
+                    <img src="images/boom2.png" alt="Boom Tank" class="main-icon">
+
+                </div>
+                <h4>BOOM TANK</h4>
+            </a>
+            <a href="#" class="topup-item">
+                <div class="topup-icon">
+                    <img src="images/chanvuong.png" alt="Chân Vương" class="main-icon">
+
+                </div>
+                <h4>CHÂN VƯƠNG</h4>
+            </a>
+
+        </div>
+
+        <!-- Pagination (Các dấu chấm điều hướng) -->
+        <div class="pagination-dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <img src="images/logo.png" alt="myE">
+        <p>Email: hotro@mye.vn</p>
+        <p>Hotline: 0902 500 198</p>
+        <p><b>CÔNG TY CỔ PHẦN MYE</b></p>
+        <p>Chịu trách nhiệm quản lí nội dung: Ông Lâm Trung Hiệp</p>
+        <p>Địa chỉ: 477/22 Âu Cơ, Phường Phú Trung, Quận Tân Phú, Thành phố Hồ Chí Minh, Việt Nam</p>
+        <p>Giấy phép G1 số: Số 297/GP-BTTTT. Ngày cấp 14/07/2020, Nơi cấp Bộ Thông Tin Và Truyền Thông</p>
+        <p>Điều khoản dịch vụ | Chính sách bảo mật</p>
+        <p>©Copyright © 2026 MYE. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/napgame.js"></script>
+</body>
+
+</html>
