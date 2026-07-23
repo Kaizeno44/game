@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="vi">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MYE - Trò Chơi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <!-- Link file CSS riêng cho trang Games -->
+    <link rel="stylesheet" href="css/games.css">
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header class="topbar">
+        <div class="container-main nav-wrap">
+            <img class="logo" src="images/logo.png" alt="myE">
+            <button class="mobile-toggle"><i class="bi bi-list"></i></button>
+            <ul class="menu">
+                <li><a href="index.html">Trang Chủ</a></li>
+                <!-- Chuyển class active sang Trò Chơi -->
+                <li><a class="active" href="games.html">Trò Chơi</a></li>
+                <li><a href="#">Nạp Game</a></li>
+                <li><a href="#">Tin Tức</a></li>
+                <li><a href="#">Hỗ Trợ</a></li>
+            </ul>
+            <button class="login-btn">ĐĂNG NHẬP</button>
+        </div>
+    </header>
+
+    <!-- SECTION 1: DỊCH VỤ -->
+    <section class="services container-main section-spacing">
+        <h2 class="section-title">Dịch Vụ</h2>
+        <div class="services-list">
+            <a href="#" class="service-item">
+                <img src="images/Vector.png" alt="Coin"> MYE COIN
+            </a>
+            <a href="#" class="service-item">
+                <img src="images/Vector2.png" alt="Gift"> GIFTCODE
+            </a>
+            <a href="#" class="service-item">
+                <img src="images/Vector3.png" alt="VIP"> VIP CLUB
+            </a>
+            <a href="#" class="service-item">
+                <i class="bi bi-person-fill text-blue fs-4"></i> TÀI KHOẢN
+            </a>
+        </div>
+    </section>
+
+    <!-- SECTION 2: DANH SÁCH GAME -->
+    <section class="games container-main section-spacing">
+        <div class="section-head">
+            <h2 class="section-title">Danh sách game</h2>
+            <a class="more" href="#">Xem thêm <i class="bi bi-arrow-right"></i></a>
+        </div>
+        <div class="filter-row">
+            <button class="filter is-active" data-filter="TẤT CẢ"><b>TẤT CẢ</b><span>60</span></button>
+            <button class="filter" data-filter="SIMULATION"><b>SIMULATION</b><span>4</span></button>
+            <button class="filter" data-filter="ACTION"><b>ACTION</b><span>11</span></button>
+            <button class="filter" data-filter="RPG"><b>RPG</b><span>37</span></button>
+            <button class="filter" data-filter="SHOOTING"><b>SHOOTING</b><span>5</span></button>
+            <button class="filter" data-filter="RACING"><b>RACING</b><span>1</span></button>
+        </div>
+        <div class="game-grid">
+            <article class="game-card">
+                <h3 class="game-title">HÀO KHÍ TAM QUỐC</h3>
+                <div class="game-type">THỂ LOẠI</div>
+                <div class="game-img" style="background-image:url('images/hktq.png')"></div>
+                <div class="actions">
+                    <span class="action-btn"><i class="bi bi-house-door"></i> Trang chủ</span>
+                    <span class="action-btn"><i class="bi bi-download"></i> Tải xuống</span>
+                </div>
+            </article>
+            <article class="game-card">
+                <h3 class="game-title">HÀO KHÍ CHIẾN HỒN</h3>
+                <div class="game-type">THỂ LOẠI</div>
+                <img class="game-tag" src="images/gamehot02 1.png" alt="Hot">
+                <div class="game-img" style="background-image:url('images/hkch.png')"></div>
+                <div class="actions">
+                    <span class="action-btn"><i class="bi bi-house-door"></i> Trang chủ</span>
+                    <span class="action-btn"><i class="bi bi-download"></i> Tải xuống</span>
+                </div>
+            </article>
+            <article class="game-card">
+                <h3 class="game-title">BOOM TANK</h3>
+                <div class="game-type">THỂ LOẠI</div>
+                <div class="game-img" style="background-image:url('images/boom.png')"></div>
+                <div class="actions">
+                    <span class="action-btn"><i class="bi bi-house-door"></i> Trang chủ</span>
+                    <span class="action-btn"><i class="bi bi-download"></i> Tải xuống</span>
+                </div>
+            </article>
+            <article class="game-card">
+                <h3 class="game-title">HÀO KHÍ DU HIỆP</h3>
+                <div class="game-type">THỂ LOẠI</div>
+                <img class="game-tag" src="images/gamemoi02_green 1.png" alt="New">
+                <div class="game-img" style="background-image:url('images/hkdh.png')"></div>
+                <div class="actions">
+                    <span class="action-btn"><i class="bi bi-house-door"></i> Trang chủ</span>
+                    <span class="action-btn"><i class="bi bi-download"></i> Tải xuống</span>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- SECTION 3: GAME MỚI PHÁT HÀNH VÀ SẮP RA MẮT -->
+    <section class="new-games container-main section-spacing">
+        <div class="section-head">
+            <h2 class="section-title">Game mới phát hành và sắp ra mắt</h2>
+            <div class="slider-nav">
+                <button class="nav-btn prev-btn"><i class="bi bi-chevron-left"></i></button>
+                <button class="nav-btn next-btn"><i class="bi bi-chevron-right"></i></button>
+            </div>
+        </div>
+        <div class="game-slider-container">
+            <div class="game-grid slider-track">
+                <!-- Tái sử dụng card -->
+                <article class="game-card">
+                    <h3 class="game-title">HÀO KHÍ TAM QUỐC</h3>
+                    <div class="game-type">THỂ LOẠI</div>
+                    <div class="game-img" style="background-image:url('images/hktq.png')"></div>
+                    <div class="actions">
+                        <span class="action-btn"><i class="bi bi-house-door"></i> Trang chủ</span>
+                        <span class="action-btn"><i class="bi bi-download"></i> Tải xuống</span>
+                    </div>
+                </article>
+                <article class="game-card">
+                    <h3 class="game-title">HÀO KHÍ CHIẾN HỒN</h3>
+                    <div class="game-type">THỂ LOẠI</div>
+                    <img class="game-tag" src="images/gamehot02 1.png" alt="Hot">
+                    <div class="game-img" style="background-image:url('images/hkch.png')"></div>
+                    <div class="actions">
+                        <span class="action-btn"><i class="bi bi-house-door"></i> Trang chủ</span>
+                        <span class="action-btn"><i class="bi bi-download"></i> Tải xuống</span>
+                    </div>
+                </article>
+                <article class="game-card">
+                    <h3 class="game-title">BOOM TANK</h3>
+                    <div class="game-type">THỂ LOẠI</div>
+                    <div class="game-img" style="background-image:url('images/boom.png')"></div>
+                    <div class="actions">
+                        <span class="action-btn"><i class="bi bi-house-door"></i> Trang chủ</span>
+                        <span class="action-btn"><i class="bi bi-download"></i> Tải xuống</span>
+                    </div>
+                </article>
+                <article class="game-card">
+                    <h3 class="game-title">HÀO KHÍ DU HIỆP</h3>
+                    <div class="game-type">THỂ LOẠI</div>
+                    <img class="game-tag" src="images/gamemoi02_green 1.png" alt="New">
+                    <div class="game-img" style="background-image:url('images/hkdh.png')"></div>
+                    <div class="actions">
+                        <span class="action-btn"><i class="bi bi-house-door"></i> Trang chủ</span>
+                        <span class="action-btn"><i class="bi bi-download"></i> Tải xuống</span>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: GAME NỔI BẬT -->
+    <section class="featured-games container-main section-spacing" style="margin-bottom: 80px;">
+        <h2 class="section-title" style="margin-bottom: 30px;">Game nổi bật</h2>
+        <div class="featured-grid">
+            <!-- 2 Card Lớn (Hàng trên) -->
+            <a href="#" class="feat-card large" style="background-image:url('images/gamesfooter1.png')">
+                <div class="feat-overlay"></div>
+                <div class="feat-info">
+                    <img src="images/game1.png" class="feat-icon" alt="Icon">
+                    <div class="feat-text">
+                        <h4>Hào Khí Chiến Hồn</h4>
+                        <p>Thể loại game</p>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="feat-card large" style="background-image:url('images/gamesfooter2.png')">
+                <div class="feat-overlay"></div>
+                <div class="feat-info">
+                    <img src="images/game2.png" class="feat-icon" alt="Icon">
+                    <div class="feat-text">
+                        <h4>Hào Khí Chiến Hồn</h4>
+                        <p>Thể loại game</p>
+                    </div>
+                </div>
+            </a>
+
+            <!-- 3 Card Nhỏ (Hàng dưới) -->
+            <a href="#" class="feat-card small" style="background-image:url('images/gamesfooter3.png')">
+                <div class="feat-overlay"></div>
+                <div class="feat-info">
+                    <img src="images/game3.png" class="feat-icon" alt="Icon">
+                    <div class="feat-text">
+                        <h4>Hào Khí Chiến Hồn</h4>
+                        <p>Thể loại game</p>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="feat-card small" style="background-image:url('images/gamesfooter4.png')">
+                <div class="feat-overlay"></div>
+                <div class="feat-info">
+                    <img src="images/game4.png" class="feat-icon" alt="Icon">
+                    <div class="feat-text">
+                        <h4>Hào Khí Chiến Hồn</h4>
+                        <p>Thể loại game</p>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="feat-card small" style="background-image:url('images/gamesfooter5.png')">
+                <div class="feat-overlay"></div>
+                <div class="feat-info">
+                    <img src="images/game5.png" class="feat-icon" alt="Icon">
+                    <div class="feat-text">
+                        <h4>Hào Khí Chiến Hồn</h4>
+                        <p>Thể loại game</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <img src="images/logo.png" alt="myE">
+        <p>Email: hotro@mye.vn</p>
+        <p>Hotline: 0902 500 198</p>
+        <p><b>CÔNG TY CỔ PHẦN MYE</b></p>
+        <p>Chịu trách nhiệm quản lí nội dung: Ông Lâm Trung Hiệp</p>
+        <p>Địa chỉ: 477/22 Âu Cơ, Phường Phú Trung, Quận Tân Phú, Thành phố Hồ Chí Minh, Việt Nam</p>
+        <p>Giấy phép G1 số: Số 297/GP-BTTTT. Ngày cấp 14/07/2020, Nơi cấp Bộ Thông Tin Và Truyền Thông</p>
+        <p>Điều khoản dịch vụ | Chính sách bảo mật</p>
+        <p>©Copyright © 2026 MYE. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/games.js"></script>
+</body>
+
+</html>

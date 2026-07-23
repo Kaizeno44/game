@@ -1,0 +1,490 @@
+<!doctype html>
+<html lang="vi">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MYE - Đăng ký</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    
+    <style>
+        /* ========================================================
+           GIỮ NGUYÊN CSS DÙNG CHUNG (MÀU, HEADER)
+           ======================================================== */
+        :root {
+            --blue: #093a88;
+            --orange: #ff7900;
+            --text: #282828;
+            --light-blue: #009aff; /* Màu xanh sáng của viền footer */
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        body {
+            margin: 0;
+            font-family: Montserrat, Arial, sans-serif;
+            color: var(--text);
+            background: #fff;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; 
+        }
+
+        .container-main {
+            max-width: 1320px;
+            margin: auto
+        }
+
+        .topbar {
+            height: 120px;
+            background: #fff;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .nav-wrap{
+            display:flex;
+            align-items:center;
+            justify-content:space-between;
+            width: 100%;
+        }
+
+        .logo{
+            width:120px;
+        }
+        
+        .menu{
+            display:flex;
+            gap:55px;
+            margin:0;
+            padding:0;
+            list-style:none;
+        }
+
+        .menu a {
+            font-size: 20px;
+            color: var(--blue);
+            text-decoration: none;
+            font-weight: 500
+        }
+
+        .menu a:hover {
+            color: var(--orange);
+        }
+
+        .login-btn{
+            background:linear-gradient(#ffab48,#ff7300);
+            border:0;
+            border-radius:999px;
+            color:#fff;
+            font-weight:800;
+            padding:12px 28px;
+            margin-left: 40px;
+        }
+
+        footer {
+            background: #e9e9e9;
+            text-align: center;
+            padding: 54px 20px 42px;
+            margin-top: auto; 
+        }
+
+        footer img {
+            width: 190px;
+            margin-bottom: 24px
+        }
+
+        footer p {
+            margin: 4px 0;
+            font-size: 14px;
+            color: #555;
+        }
+
+        .mobile-toggle {
+            display: none
+        }
+
+        /* ========================================================
+           CSS CHUYÊN BIỆT CHO TRANG ĐĂNG KÝ
+           ======================================================== */
+        
+        .auth-section {
+            background-color: #fafbfc; 
+            padding: 60px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-grow: 1; 
+        }
+
+        /* Vỏ bọc chứa 2 khối box */
+        .auth-wrapper {
+            width: 100%;
+            max-width: 560px;
+            display: flex;
+            flex-direction: column;
+            gap: 24px; /* Khoảng cách giữa 2 khối */
+        }
+
+        .auth-box {
+            background: #fff;
+            width: 100%;
+            border-radius: 16px;
+            padding: 45px 50px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.06); 
+            text-align: center;
+        }
+
+        .auth-box h2 {
+            color: var(--blue);
+            font-weight: 800;
+            font-size: 24px;
+            text-transform: uppercase;
+            margin-bottom: 35px;
+        }
+
+        /* NHÓM 1: CÁC Ô NHẬP LIỆU CÓ ICON (Đăng ký tài khoản) */
+        .input-group-custom {
+            position: relative;
+            margin-bottom: 25px;
+        }
+
+        .input-group-custom .icon-left {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--blue);
+            font-size: 20px;
+        }
+
+        .input-group-custom .icon-right {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #999;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .input-group-custom input {
+            width: 100%;
+            height: 54px;
+            border: 1px solid #dcdcdc;
+            border-radius: 12px;
+            padding: 0 50px 0 55px; 
+            font-family: inherit;
+            font-size: 15px;
+            outline: none;
+            transition: all 0.3s;
+        }
+
+        .input-group-custom input:focus {
+            border-color: var(--blue);
+        }
+
+        /* NHÓM 2: CÁC Ô NHẬP LIỆU CÓ TIÊU ĐỀ (Thông tin tài khoản) */
+        .form-group {
+            margin-bottom: 22px;
+            text-align: left;
+        }
+
+        .form-group label {
+            font-weight: 700;
+            font-size: 13px;
+            color: #333;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .text-danger {
+            color: #dc3545; /* Màu đỏ cho dấu sao bắt buộc */
+        }
+
+        .form-control-custom {
+            width: 100%;
+            height: 52px;
+            border: 1px solid #dcdcdc;
+            border-radius: 12px;
+            padding: 0 18px;
+            font-family: inherit;
+            font-size: 14px;
+            outline: none;
+            transition: all 0.3s;
+        }
+
+        .form-control-custom:focus {
+            border-color: var(--blue);
+        }
+
+        /* Nhóm Giới tính (Radio buttons) */
+        .radio-group {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+            height: 40px;
+        }
+
+        .radio-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+        }
+
+        /* Khối chứa Captcha */
+        .captcha-group {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .captcha-group input {
+            flex: 1; /* Input mã xác nhận chiếm không gian còn lại */
+        }
+
+        .captcha-image {
+            height: 45px;
+            border-radius: 6px;
+        }
+
+        .refresh-btn {
+            background: none;
+            border: none;
+            font-size: 24px;
+            color: var(--blue);
+            cursor: pointer;
+            padding: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        /* Nút bấm, dải phân cách và text phụ */
+        .btn-auth {
+            display: block;
+            width: 100%;
+            height: 52px;
+            border-radius: 10px;
+            font-weight: 700;
+            font-size: 15px;
+            border: none;
+            cursor: pointer;
+            margin-top: 25px;
+            transition: opacity 0.2s;
+        }
+
+        .btn-auth:hover { opacity: 0.9; }
+
+        .btn-auth-primary {
+            background: linear-gradient(#ffab48, #ff7300);
+            color: #fff;
+        }
+
+        .btn-auth-secondary {
+            background: var(--blue);
+            color: #fff;
+        }
+
+        .terms-text {
+            font-size: 12px;
+            color: #666;
+            margin-top: 15px;
+        }
+
+        .terms-text a {
+            color: var(--blue);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .divider {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: #999;
+            font-size: 13px;
+            margin: 25px 0 10px;
+        }
+
+        .divider::before, .divider::after {
+            content: '';
+            flex: 1;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .divider:not(:empty)::before { margin-right: 15px; }
+        .divider:not(:empty)::after { margin-left: 15px; }
+
+        /* Responsive */
+        @media(max-width:768px) {
+            .menu { display: none; }
+            .mobile-toggle { display: block; border: 0; background: #fff; font-size: 28px; color: var(--blue); }
+            .login-btn { display: none; }
+            .auth-box { padding: 35px 25px; }
+            .captcha-group { flex-wrap: wrap; }
+            .captcha-image { flex: 1; }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header class="topbar">
+        <div class="container-main nav-wrap">
+            <img class="logo" src="images/logo.png" alt="myE">
+            <button class="mobile-toggle"><i class="bi bi-list"></i></button>
+            <ul class="menu">
+                <li><a href="index.html">Trang Chủ</a></li>
+                <li><a href="#">Trò Chơi</a></li>
+                <li><a href="#">Nạp Game</a></li>
+                <li><a href="#">Tin Tức</a></li>
+                <li><a href="#">Hỗ Trợ</a></li>
+            </ul>
+            <button class="login-btn">ĐĂNG NHẬP</button>
+        </div>
+    </header>
+
+    <!-- NỘI DUNG CHÍNH: KHU VỰC ĐĂNG KÝ -->
+    <section class="auth-section">
+        <div class="auth-wrapper">
+            
+            <!-- KHỐI 1: ĐĂNG KÝ TÀI KHOẢN -->
+            <div class="auth-box">
+                <h2>Đăng ký tài khoản</h2>
+                <form action="#" method="POST">
+                    <div class="input-group-custom">
+                        <i class="bi bi-person-fill icon-left"></i>
+                        <input type="text" placeholder="Tên đăng nhập hoặc Email" required>
+                    </div>
+
+                    <div class="input-group-custom">
+                        <i class="bi bi-lock-fill icon-left"></i>
+                        <input type="password" placeholder="Mật khẩu" class="pass-input" required>
+                        <i class="bi bi-eye-slash icon-right toggle-pass"></i>
+                    </div>
+
+                    <div class="input-group-custom">
+                        <i class="bi bi-lock-fill icon-left"></i>
+                        <input type="password" placeholder="Nhập lại mật khẩu" class="pass-input" required>
+                        <i class="bi bi-eye-slash icon-right toggle-pass"></i>
+                    </div>
+                </form>
+            </div>
+
+            <!-- KHỐI 2: THÔNG TIN TÀI KHOẢN -->
+            <div class="auth-box">
+                <h2>Thông tin tài khoản</h2>
+                <form action="#" method="POST">
+                    
+                    <div class="form-group">
+                        <label>Họ và tên<span class="text-danger">(*)</span></label>
+                        <input type="text" class="form-control-custom" placeholder="Nguyễn Văn A" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Giới tính<span class="text-danger">(*)</span></label>
+                        <div class="radio-group">
+                            <label class="radio-item">
+                                <input type="radio" name="gender" value="Nam" checked> Nam
+                            </label>
+                            <label class="radio-item">
+                                <input type="radio" name="gender" value="Nữ"> Nữ
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Ngày sinh<span class="text-danger">(*)</span></label>
+                        <!-- Dùng type="date" mặc định sẽ có icon lịch ở cuối trên đa số trình duyệt -->
+                        <input type="date" class="form-control-custom" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Địa chỉ<span class="text-danger">(*)</span></label>
+                        <input type="text" class="form-control-custom" placeholder="Địa chỉ" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Email<span class="text-danger">(*)</span></label>
+                        <input type="email" class="form-control-custom" placeholder="Email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Số điện thoại<span class="text-danger">(*)</span></label>
+                        <input type="tel" class="form-control-custom" placeholder="Số điện thoại" required>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="captcha-group">
+                            <input type="text" class="form-control-custom" placeholder="Mã xác nhận" required>
+                            <!-- Bạn thay ảnh captcha giả lập này bằng ảnh captcha thật của hệ thống -->
+                            <img src="images/capcha.png" alt="Captcha" class="captcha-image" style="background: #eee; width: 120px; object-fit: cover;">
+                            <button type="button" class="refresh-btn"><i class="bi bi-arrow-clockwise"></i></button>
+                        </div>
+                    </div>
+
+                    <!-- Các nút xác nhận -->
+                    <button type="submit" class="btn-auth btn-auth-primary">ĐĂNG KÝ</button>
+                    
+                    <div class="terms-text">
+                        Bằng việc click vào nút Đăng Ký, Bạn đã đồng ý với <a href="#">Điều khoản sử dụng</a>
+                    </div>
+                    
+                    <div class="divider">hoặc</div>
+                    
+                    <button type="button" class="btn-auth btn-auth-secondary">ĐĂNG NHẬP</button>
+
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <img src="images/logo.png" alt="myE">
+        <p>Email: hotro@mye.vn</p>
+        <p>Hotline: 0902 500 198</p>
+        <p><b>CÔNG TY CỔ PHẦN MYE</b></p>
+        <p>Chịu trách nhiệm quản lí nội dung: Ông Lâm Trung Hiệp</p>
+        <p>Địa chỉ: 477/22 Âu Cơ, Phường Phú Trung, Quận Tân Phú, Thành phố Hồ Chí Minh, Việt Nam</p>
+        <p>Giấy phép G1 số: Số 297/GP-BTTTT. Ngày cấp 14/07/2020, Nơi cấp Bộ Thông Tin Và Truyền Thông</p>
+        <p>Điều khoản dịch vụ | Chính sách bảo mật</p>
+        <p>©Copyright © 2026 MYE. All Rights Reserved.</p>
+    </footer>
+
+    <!-- SCRIPT -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        $(function () {
+            // Menu mobile
+            $('.mobile-toggle').on('click', function () {
+                $('.menu').toggleClass('open')
+            });
+
+            // Ẩn/Hiện mật khẩu cho NHIỀU ô input (Mật khẩu & Nhập lại mật khẩu)
+            $('.toggle-pass').on('click', function() {
+                var passInput = $(this).siblings('.pass-input');
+                if (passInput.attr('type') === 'password') {
+                    passInput.attr('type', 'text');
+                    $(this).removeClass('bi-eye-slash').addClass('bi-eye');
+                } else {
+                    passInput.attr('type', 'password');
+                    $(this).removeClass('bi-eye').addClass('bi-eye-slash');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
