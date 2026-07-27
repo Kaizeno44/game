@@ -680,6 +680,13 @@
                 color: var(--blue);
                 order: 3;
                 padding: 0;
+                cursor: pointer;
+                transition: color 0.3s ease, transform 0.3s ease;
+            }
+
+            .mobile-toggle:hover {
+                color: var(--orange);
+                transform: scale(1.1);
             }
 
             .menu {
@@ -697,15 +704,25 @@
 
             .menu a {
                 font-size: 18px;
-                padding: 6px 0;
+                padding: 8px 12px;
                 display: block;
+                border-radius: 6px;
+                transition: all 0.3s ease;
+            }
+
+            .menu a:hover {
+                color: var(--orange);
+                background: rgba(255, 121, 0, 0.08);
+                padding-left: 16px;
             }
 
             .menu a.active {
                 border-bottom: none;
-                border-left: 3px solid var(--orange);
-                padding-left: 10px;
-                padding-bottom: 6px;
+                border-left: 4px solid var(--orange);
+                color: var(--orange);
+                font-weight: 700;
+                padding-left: 14px;
+                background: rgba(255, 121, 0, 0.05);
             }
 
             .hero {
