@@ -724,14 +724,13 @@
             }
 
             .hero-logo {
-                width: 55%;
-                top: 15%;
+                display: none !important;
             }
 
             .hero-copy {
-                bottom: 75px; /* Nâng nội dung copy lên để không đè vào ảnh nhỏ ở bottom: 25px */
-                padding: 0 15px;
-                gap: 10px;
+                bottom: 70px;
+                padding: 0 20px;
+                gap: 8px;
             }
 
             .hero-copy p {
