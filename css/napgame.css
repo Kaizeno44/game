@@ -229,8 +229,18 @@ footer p { margin: 4px 0; font-size: 14px; }
     .menu a:hover { color: var(--orange); background: rgba(255, 121, 0, 0.08); padding-left: 16px; }
     .menu a.active { border-bottom: none; border-left: 4px solid var(--orange); color: var(--orange); font-weight: 700; padding-left: 14px; background: rgba(255, 121, 0, 0.05); }
 
-    .topup-banner { height: 220px; }
-    .history-btn { right: 20px; bottom: 20px; padding: 8px 20px; font-size: 13px; }
+    .topup-banner { 
+        height: auto;
+        aspect-ratio: 16 / 9;
+        background-size: contain;
+        background-position: center;
+    }
+    .history-btn { 
+        right: 12px; 
+        bottom: 12px; 
+        padding: 5px 14px; 
+        font-size: 11px; 
+    }
     
     .topup-grid { grid-template-columns: repeat(2, 1fr); gap: 25px 15px; }
     .topup-icon { width: 120px; height: 120px; border-radius: 24px; }
@@ -366,8 +376,54 @@ footer p { margin: 4px 0; font-size: 14px; }
     .menu a { font-size: 18px; padding: 6px 0; display: block; }
     .menu a.active { border-bottom: none; border-left: 3px solid var(--orange); padding-left: 10px; padding-bottom: 6px; }
 
-    .topup-banner { height: 220px; }
-    .history-btn { right: 20px; bottom: 20px; padding: 8px 20px; font-size: 13px; }
-    .payment-grid, .package-grid { grid-template-columns: 1fr; }
+    .topup-banner { 
+        height: auto;
+        aspect-ratio: 16 / 9;
+        background-size: contain;
+        background-position: center;
+    }
+    .history-btn { 
+        right: 12px; 
+        bottom: 12px; 
+        padding: 5px 14px; 
+        font-size: 11px; 
+    }
+    /* Dàn 2 cột gọn gàng cho hình thức nạp & gói nạp trên Mobile */
+    .payment-grid { 
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 12px; 
+    }
+    .pay-item { 
+        padding: 12px 8px; 
+        gap: 8px; 
+        font-size: 12px; 
+    }
+    .pay-item img { 
+        height: 32px; 
+    }
+
+    .package-grid { 
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 12px; 
+    }
+    .pack-info { 
+        padding: 10px; 
+        flex-direction: column; 
+        align-items: flex-start; 
+        gap: 8px; 
+    }
+    .pack-info .buy-btn { 
+        width: 100%; 
+        padding: 6px 0; 
+        font-size: 12px; 
+        text-align: center; 
+    }
+    .account-box { 
+        padding: 15px 10px; 
+    }
+    .acc-label, .acc-val { 
+        font-size: 13px; 
+    }
+
     footer { padding: 40px 16px 30px; }
 }

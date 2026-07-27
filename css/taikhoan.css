@@ -47,12 +47,10 @@ body {
 
 /* ==================== HERO BANNER TÀI KHOẢN ==================== */
 .profile-hero {
-    background: var(--hero-bg) url('../images/bannernapthe.png') center/cover no-repeat; /* Bạn có thể chèn hình nền tùy thích */
+    background: url('../images/Maskgroup.png') center/cover no-repeat;
     position: relative;
-    padding: 40px 0;
+    padding: 35px 0;
 }
-/* Lớp phủ cho tối lại chút nếu ảnh nền sáng */
-.profile-hero::before { content: ""; position: absolute; inset: 0; background: rgba(6, 17, 44, 0.85); z-index: 1; }
 
 .profile-hero-inner {
     position: relative;
@@ -65,15 +63,16 @@ body {
 .profile-info-wrap {
     display: flex;
     align-items: center;
-    gap: 30px;
+    gap: 25px;
 }
 .profile-avatar-large {
     width: 140px;
     height: 140px;
     border-radius: 50%;
-    background: #00d2ff; /* Màu nền vòng ngoài avatar */
+    background: #00d2ff; /* Vòng màu xanh lam ngọc bao ngoài avatar */
     padding: 6px;
-    box-shadow: 0 0 20px rgba(0, 210, 255, 0.4);
+    box-shadow: 0 0 25px rgba(0, 210, 255, 0.5);
+    flex-shrink: 0;
 }
 .profile-avatar-large img {
     width: 100%;
@@ -83,24 +82,33 @@ body {
     background: #fff;
 }
 
-.profile-details h2 { color: #fff; font-size: 26px; font-weight: 700; margin-bottom: 12px; text-transform: uppercase; }
-.profile-details p { color: #c0c8e4; font-size: 14px; margin: 5px 0; display: flex; align-items: center; gap: 10px; }
-.profile-details p i { color: #fff; font-size: 16px; }
+.profile-details h2 { color: #fff; font-size: 24px; font-weight: 700; margin-bottom: 12px; }
+.profile-details p { color: #fff; font-size: 14px; margin: 6px 0; display: flex; align-items: center; gap: 10px; opacity: 0.9; }
+.profile-details p i { color: #fff; font-size: 15px; }
 
-.profile-nav-btns { display: flex; gap: 15px; }
+.profile-nav-btns { display: flex; gap: 12px; }
 .btn-profile-nav {
-    border: 1px solid rgba(255,255,255,0.3);
-    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    background: rgba(10, 30, 80, 0.4);
     color: #fff;
-    padding: 8px 24px;
-    border-radius: 999px;
+    padding: 10px 24px;
+    border-radius: 8px;
     text-decoration: none;
     font-size: 14px;
     font-weight: 600;
-    transition: all 0.3s;
+    backdrop-filter: blur(5px);
+    transition: all 0.3s ease;
 }
-.btn-profile-nav:hover { background: rgba(255,255,255,0.15); color: #fff; }
-.btn-profile-nav.active { background: #1c52b8; border-color: #1c52b8; }
+.btn-profile-nav:hover { 
+    background: rgba(255, 255, 255, 0.2); 
+    border-color: #fff; 
+    color: #fff; 
+}
+.btn-profile-nav.active { 
+    background: linear-gradient(185deg, #1f6bff, #0045c7); 
+    border-color: #3b82ff; 
+    box-shadow: 0 4px 15px rgba(0, 85, 220, 0.5);
+}
 
 /* ==================== MỨC ĐỘ BẢO MẬT (PROGRESS RING) ==================== */
 .profile-content { padding: 40px 0 80px; }
@@ -366,6 +374,14 @@ footer p { margin: 4px 0; font-size: 14px; }
         padding-left: 14px;
         background: rgba(255, 121, 0, 0.05);
     }
+
+    .profile-hero { padding: 25px 0; }
+    .profile-hero-inner { flex-direction: column; align-items: flex-start; gap: 20px; }
+    .profile-avatar-large { width: 100px; height: 100px; padding: 4px; }
+    .profile-details h2 { font-size: 20px; }
+    .profile-details p { font-size: 12px; }
+    .profile-nav-btns { width: 100%; justify-content: flex-start; gap: 8px; flex-wrap: wrap; }
+    .btn-profile-nav { padding: 8px 16px; font-size: 13px; flex: 1; text-align: center; }
 
     .info-row { flex-direction: column; align-items: flex-start; gap: 10px; }
     .info-label { width: 100%; }

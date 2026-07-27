@@ -828,8 +828,39 @@
             }
 
             .game-grid {
-                grid-template-columns: 1fr;
-                gap: 20px;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 12px;
+            }
+
+            .game-card { 
+                padding: 12px 10px 0; 
+                overflow: hidden; 
+            }
+            .game-img { 
+                height: 150px; 
+                object-fit: cover; 
+            }
+            .game-title { 
+                font-size: 12px; 
+                line-height: 1.3; 
+                padding-right: 25px; 
+                word-break: break-word; 
+            }
+            .game-type { 
+                font-size: 10px; 
+                margin-bottom: 6px; 
+            }
+            .game-tag { 
+                top: -14px; 
+                right: -8px; 
+                width: 52px; 
+            }
+            .actions { 
+                margin: auto -10px 0; 
+                padding: 8px 10px; 
+            }
+            .action-btn { 
+                font-size: 10px; 
             }
 
             .feature {
