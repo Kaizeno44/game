@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="vi">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MYE - Xác Minh Email</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    
+    <!-- File CSS dùng chung -->
+    <link rel="stylesheet" href="css/baomat.css">
+    <link rel="stylesheet" href="css/taikhoan.css">
+    <link rel="stylesheet" href="css/quenmk.css">    
+
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header class="topbar">
+        <div class="container-main nav-wrap">
+            <img class="logo" src="images/logo.png" alt="myE">
+            <button class="mobile-toggle"><i class="bi bi-list"></i></button>
+            <ul class="menu">
+                <li><a href="index.html">Trang Chủ</a></li>
+                <li><a href="games.html">Trò Chơi</a></li>
+                <li><a href="napgame.html">Nạp Game</a></li>
+                <li><a href="#">Tin Tức</a></li>
+                <li><a href="#">Hỗ Trợ</a></li>
+            </ul>
+            
+            <div>
+                <a href="dangnhap.html" class="btn btn-login-header">Đăng Nhập</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="d-flex align-items-center justify-content-center px-3">
+        <div class="auth-card">
+            <!-- Nút Close -->
+            <button class="btn-close-custom" onclick="window.history.back();"><i class="bi bi-x"></i></button>
+
+            <!-- Icon Thư xác nhận -->
+            <div class="mail-icon-wrap">
+                <!-- Vui lòng cắt icon bức thư màu đen có bong báo xanh lá từ thiết kế lưu thành 'icon-mail-confirm.png' -->
+                <img src="images/icon-mail-confirm.png" alt="Mail Icon" class="mail-icon-img" onerror="this.onerror=null;">
+            </div>
+
+            <!-- Nội dung chữ -->
+            <h3 class="confirm-title">Chúng tôi sẽ gửi mã xác minh đến Email của bạn</h3>
+            <div class="confirm-email">mye********1203@gmail.com</div>
+
+            <!-- Đường phân cách -->
+            <hr class="custom-hr">
+
+            <!-- Hai nút hành động -->
+            <div class="d-flex justify-content-center gap-3 mt-4">
+                <button type="button" class="btn btn-cancel" onclick="window.history.back();">HỦY</button>
+                <button type="button" class="btn btn-confirm">ĐỒNG Ý</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <img src="images/logo.png" alt="myE">
+        <p>Email: hotro@mye.vn</p>
+        <p>Hotline: 0902 500 198</p>
+        <p><b>CÔNG TY CỔ PHẦN MYE</b></p>
+        <p>Chịu trách nhiệm quản lí nội dung: Ông Lâm Trung Hiệp</p>
+        <p>Địa chỉ: 477/22 Âu Cơ, Phường Phú Trung, Quận Tân Phú, Thành phố Hồ Chí Minh, Việt Nam</p>
+        <p>Giấy phép G1 số: Số 297/GP-BTTTT. Ngày cấp 14/07/2020, Nơi cấp Bộ Thông Tin Và Truyền Thông</p>
+        <p>Điều khoản dịch vụ | Chính sách bảo mật</p>
+        <p>©Copyright © 2026 MYE. All Rights Reserved.</p>
+    </footer>
+    <!-- JS -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

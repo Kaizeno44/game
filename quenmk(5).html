@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="vi">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MYE - Cài Đặt Mật Khẩu Mới</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    
+    <!-- File CSS dùng chung -->
+    <link rel="stylesheet" href="css/baomat.css">
+    <link rel="stylesheet" href="css/taikhoan.css">
+    <link rel="stylesheet" href="css/quenmk.css">
+
+    <style>
+        /* Tùy chỉnh riêng cho khung đặt mật khẩu mới chuẩn theo hình mẫu */
+        .auth-card {
+            max-width: 650px !important;
+            padding: 45px 50px !important;
+            position: relative;
+        }
+        
+        .auth-title {
+            color: #0b3582;
+            font-weight: 700;
+            font-size: 26px;
+            margin-bottom: 10px;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        .auth-subtitle {
+            font-size: 12px;
+            color: #444;
+            text-align: center;
+            margin-bottom: 30px;
+            line-height: 1.5;
+        }
+
+        /* Khung chứa input dạng khối thống nhất */
+        .custom-password-box {
+            position: relative;
+            display: flex;
+            align-items: center;
+            background: #fff;
+            border: 1px solid #ced4da;
+            border-radius: 8px;
+            height: 50px;
+            padding: 0 15px;
+            transition: border-color 0.2s;
+        }
+
+        .custom-password-box:focus-within {
+            border-color: #0b3582;
+            box-shadow: 0 0 0 0.15rem rgba(11, 53, 130, 0.15);
+        }
+
+        .custom-password-box .lock-icon {
+            width: 18px;
+            height: 18px;
+            object-fit: contain;
+            margin-right: 15px;
+        }
+
+        .custom-password-box .form-input-custom {
+            flex-grow: 1;
+            border: none;
+            outline: none;
+            font-size: 14px;
+            background: transparent;
+            color: #333;
+            box-shadow: none !important;
+        }
+
+        .custom-password-box .toggle-password {
+            background: none;
+            border: none;
+            color: #0b3582;
+            font-size: 18px;
+            cursor: pointer;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .form-label-custom {
+            font-size: 13px;
+            font-weight: 700;
+            color: #222;
+            margin-bottom: 8px;
+        }
+
+        .required-star {
+            color: #dc3545;
+            margin-left: 2px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header class="topbar">
+        <div class="container-main nav-wrap">
+            <img class="logo" src="images/logo.png" alt="myE">
+            <button class="mobile-toggle"><i class="bi bi-list"></i></button>
+            <ul class="menu">
+                <li><a href="index.html">Trang Chủ</a></li>
+                <li><a href="games.html">Trò Chơi</a></li>
+                <li><a href="napgame.html">Nạp Game</a></li>
+                <li><a href="#">Tin Tức</a></li>
+                <li><a href="#">Hỗ Trợ</a></li>
+            </ul>
+            
+            <div>
+                <a href="dangnhap.html" class="btn btn-login-header">Đăng Nhập</a>
+            </div>
+        </div>
+    </header>
+
+<!-- NỘI DUNG CHÍNH (Form Đặt Mật Khẩu Mới) -->
+<main class="d-flex align-items-center justify-content-center px-3">
+        <div class="auth-card">
+            <!-- Nút Close -->
+            <button class="btn-close-custom" onclick="window.history.back();"><i class="bi bi-x-lg"></i></button>
+
+            <!-- Tiêu đề -->
+            <h2 class="auth-title">CÀI ĐẶT MẬT KHẨU MỚI</h2>
+            <p class="auth-subtitle">Mật khẩu của bạn phải dài từ 8 đến 16 ký tự, phải chứa ít nhất 1 ký tự viết hoa, 1 ký tự viết thường, 1 ký tự số và 1 ký tự đặc biệt.</p>
+
+            <form class="text-start">
+                <!-- Nhập mật khẩu mới -->
+                <div class="mb-4">
+                    <label class="form-label-custom">Nhập mật khẩu mới <span class="required-star">*</span></label>
+                    <div class="custom-password-box">
+                        <img src="images/lock.png" alt="Lock" class="lock-icon" onerror="this.onerror=null; this.src='https://cdn-icons-png.flaticon.com/512/6145/6145289.png';">
+                        <input type="password" id="new_password" class="form-input-custom" placeholder="Nhập mật khẩu mới của bạn">
+                        <button type="button" class="toggle-password" toggle="#new_password">
+                            <i class="bi bi-eye text-primary"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Xác nhận mật khẩu -->
+                <div class="mb-4">
+                    <label class="form-label-custom">Xác nhận mật khẩu <span class="required-star">*</span></label>
+                    <div class="custom-password-box">
+                        <img src="images/lock.png" alt="Lock" class="lock-icon" onerror="this.onerror=null; this.src='https://cdn-icons-png.flaticon.com/512/6145/6145289.png';">
+                        <input type="password" id="confirm_password" class="form-input-custom" placeholder="Nhập lại mật khẩu">
+                        <button type="button" class="toggle-password" toggle="#confirm_password">
+                            <i class="bi bi-eye text-primary"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Nút Xác Nhận -->
+                <button type="button" class="btn w-100 fw-bold text-white py-2 mt-2" style="background-color: #0b3582; font-size: 14px; height: 48px; border-radius: 6px;">
+                    XÁC NHẬN
+                </button>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <img src="images/logo.png" alt="myE">
+        <p>Email: hotro@mye.vn</p>
+        <p>Hotline: 0902 500 198</p>
+        <p><b>CÔNG TY CỔ PHẦN MYE</b></p>
+        <p>Chịu trách nhiệm quản lí nội dung: Ông Lâm Trung Hiệp</p>
+        <p>Địa chỉ: 477/22 Âu Cơ, Phường Phú Trung, Quận Tân Phú, Thành phố Hồ Chí Minh, Việt Nam</p>
+        <p>Giấy phép G1 số: Số 297/GP-BTTTT. Ngày cấp 14/07/2020, Nơi cấp Bộ Thông Tin Và Truyền Thông</p>
+        <p>Điều khoản dịch vụ | Chính sách bảo mật</p>
+        <p>©Copyright © 2026 MYE. All Rights Reserved.</p>
+    </footer>
+
+    <!-- JS -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/quenmk.js"></script>
+
+</body>
+</html>

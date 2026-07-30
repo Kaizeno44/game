@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="vi">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MYE - Bảo Mật Tài Khoản</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <!-- Dùng chung file CSS với trang Tài khoản -->
+    <link rel="stylesheet" href="css/baomat.css">
+    <link rel="stylesheet" href="css/taikhoan.css">
+    <!-- Kéo thư viện jQuery và Bootstrap (Nếu có rồi thì bỏ qua) -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Thêm đoạn script này để bắt sự kiện click nút 3 gạch -->
+    <script>
+        $(document).ready(function() {
+            // Khi click vào nút mobile-toggle, thêm/xóa class 'open' cho menu
+            $('.mobile-toggle').on('click', function(e) {
+                e.preventDefault();
+                $('.menu').toggleClass('open');
+            });
+        });
+    </script>
+</body>
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header class="topbar">
+        <div class="container-main nav-wrap">
+            <img class="logo" src="images/logo.png" alt="myE">
+            <button class="mobile-toggle"><i class="bi bi-list"></i></button>
+            <ul class="menu">
+                <li><a href="index.html">Trang Chủ</a></li>
+                <li><a href="games.html">Trò Chơi</a></li>
+                <li><a href="napgame.html">Nạp Game</a></li>
+                <li><a href="#">Tin Tức</a></li>
+                <li><a href="#">Hỗ Trợ</a></li>
+            </ul>
+            
+            <div class="header-user-widget">
+                <img src="images/avatar.png" alt="User" class="widget-avatar">
+                <div class="widget-info">
+                    <span class="widget-name">myepro123</span>
+                    <span class="widget-coin"><img src="images/coin.png" alt="coin"> 1200</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO BANNER -->
+    <section class="profile-hero">
+        <div class="container-main profile-hero-inner">
+            <div class="profile-info-wrap">
+                <div class="profile-avatar-large">
+                    <img src="images/avatar.png" alt="Nguyễn Văn A">
+                </div>
+                <div class="profile-details">
+                    <h2>Nguyễn Văn A</h2>
+                    <p><i class="bi bi-person-fill"></i> Tài khoản: fb.112314335</p>
+                    <p><i class="bi bi-fingerprint"></i> MYE ID: 11233548</p>
+                    <p><i class="bi bi-calendar-event"></i> Ngày tạo tài khoản: 19/04/2026</p>
+                </div>
+            </div>
+            
+            <div class="profile-nav-btns">
+                <a href="taikhoan.html" class="btn-profile-nav">Tài khoản</a>
+                <!-- Nút Bảo mật được active -->
+                <a href="baomat.html" class="btn-profile-nav active">Bảo mật</a>
+                <a href="#" class="btn-profile-nav">Lịch sử giao dịch</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- MAIN CONTENT: BẢO MẬT -->
+    <main class="profile-content container-main">
+        
+        <!-- Tiêu đề -->
+        <div class="section-title-wrap mb-4">
+            <h2 class="sub-section-title" style="font-size: 28px;">Bảo mật tài khoản</h2>
+            <p>Quản lý thông tin bảo mật để bảo vệ tài khoản của bạn</p>
+        </div>
+
+        <!-- Khối 1: Email -->
+        <div class="security-card">
+            <div class="security-card-left">
+                <div class="security-icon-box"><i class="bi bi-envelope-check-fill"></i></div>
+                <div>
+                    <div class="fw-bold text-dark mb-1">Email của bạn</div>
+                    <div class="d-flex align-items-center gap-2">
+                        <span class="text-muted small">mye********1203@gmail.com</span>
+                        <span class="badge-verified">Đã xác thực</span>
+                    </div>
+                </div>
+            </div>
+            <button class="btn-edit-outline flex-shrink-0">Thay đổi</button>
+        </div>
+
+        <!-- Khối 2: Số điện thoại -->
+        <div class="security-card">
+            <div class="security-card-left">
+                <div class="security-icon-box"><i class="bi bi-telephone-fill"></i></div>
+                <div>
+                    <div class="fw-bold text-dark mb-1">Số điện thoại</div>
+                    <div class="d-flex align-items-center gap-2">
+                        <span class="text-muted small">+84 235***203</span>
+                        <span class="badge-verified">Đã xác thực</span>
+                    </div>
+                </div>
+            </div>
+            <button class="btn-edit-outline flex-shrink-0">Thay đổi</button>
+        </div>
+
+        <!-- Khối 3: Mật khẩu -->
+        <div class="security-card">
+            <div class="security-card-left">
+                <div class="security-icon-box"><i class="bi bi-shield-lock-fill"></i></div>
+                <div>
+                    <div class="fw-bold text-dark mb-1">Thiết lập Mật khẩu</div>
+                    <div class="d-flex align-items-center gap-2">
+                        <span class="text-muted small">*******************</span>
+                    </div>
+                </div>
+            </div>
+            <button class="btn-edit-outline flex-shrink-0">Thay đổi</button>
+        </div>
+
+        <!-- Hộp thông báo / Cảnh báo -->
+        <div class="security-alert-box mt-4 mb-5">
+            <i class="bi bi-shield-check text-primary fs-3"></i>
+            <div>
+                <h4 class="fw-bold text-dark mb-1" style="font-size: 14px;">Vì sao cần xác thực khi thay đổi?</h4>
+                <p class="mb-0 text-muted" style="font-size: 13px;">Để đảm bảo chỉ chủ tài khoản mới có thể thay đổi thông tin quan trọng, tránh rủi ro bị chiếm đoạt tài khoản.</p>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <img src="images/logo.png" alt="myE">
+        <p>Email: hotro@mye.vn</p>
+        <p>Hotline: 0902 500 198</p>
+        <p><b>CÔNG TY CỔ PHẦN MYE</b></p>
+        <p>Chịu trách nhiệm quản lí nội dung: Ông Lâm Trung Hiệp</p>
+        <p>Địa chỉ: 477/22 Âu Cơ, Phường Phú Trung, Quận Tân Phú, Thành phố Hồ Chí Minh, Việt Nam</p>
+        <p>Giấy phép G1 số: Số 297/GP-BTTTT. Ngày cấp 14/07/2020, Nơi cấp Bộ Thông Tin Và Truyền Thông</p>
+        <p>Điều khoản dịch vụ | Chính sách bảo mật</p>
+        <p>©Copyright © 2026 MYE. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
