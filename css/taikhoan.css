@@ -283,7 +283,7 @@ footer p { margin: 4px 0; font-size: 14px; }
 @media(max-width: 768px) {
     .topbar {
         height: auto;
-        padding: 16px 0;
+        padding: 0;
     }
 
     .nav-wrap {
@@ -292,46 +292,51 @@ footer p { margin: 4px 0; font-size: 14px; }
         justify-content: space-between;
         flex-wrap: wrap;
         padding: 0 16px;
-    }
-
-    .logo {
-        width: 100px;
-        margin-right: 0;
-        order: 1;
-    }
-
-    .header-user-widget {
-        order: 2;
-        margin-left: auto;
-        margin-right: 12px;
-        padding: 4px 14px 4px 6px;
-        gap: 8px;
-    }
-
-    .widget-avatar {
-        width: 32px;
-        height: 32px;
-    }
-
-    .widget-name,
-    .widget-coin {
-        font-size: 11px;
-    }
-
-    .widget-coin img {
-        width: 13px;
+        position: relative;
+        min-height: 60px;
     }
 
     .mobile-toggle {
-        display: block;
+        display: flex;
+        align-items: center;
         border: 0;
         background: transparent;
         font-size: 28px;
         color: var(--blue);
-        order: 3;
+        order: 1;
         padding: 0;
+        margin: 0;
         cursor: pointer;
+        height: 60px;
+        z-index: 11;
         transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+    .logo {
+        width: 100px;
+        margin: 0;
+        order: 2;
+        position: absolute;
+        left: 50%;
+        top: 30px;
+        transform: translate(-50%, -50%);
+        z-index: 10;
+    }
+
+    .login-btn, .header-user-widget, .nav-wrap > div {
+        order: 3;
+        margin-left: auto;
+        margin-right: 0;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        height: 60px;
+        z-index: 11;
+    }
+
+    .header-user-widget {
+        padding: 4px 14px 4px 6px;
+        gap: 8px;
     }
 
     .mobile-toggle:hover {
@@ -346,6 +351,7 @@ footer p { margin: 4px 0; font-size: 14px; }
         gap: 15px;
         padding: 20px 0 10px;
         order: 4;
+        margin-top: 0;
     }
 
     .menu.open {

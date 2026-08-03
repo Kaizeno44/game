@@ -9,6 +9,10 @@ document.addEventListener("DOMContentLoaded", function() {
             const emailRow = document.getElementById('emailRow');
             const phoneRow = document.getElementById('phoneRow');
 
+            if (!radioEmail || !radioPhone || !inputEmail || !selectPhoneCode || !inputPhone || !emailRow || !phoneRow) {
+                return;
+            }
+
             function updateInputs() {
                 if (radioEmail.checked) {
                     // Mở khóa ô Email
@@ -67,6 +71,10 @@ document.addEventListener("DOMContentLoaded", function() {
 document.addEventListener("DOMContentLoaded", function() {
             let timeLeft = 40;
             const timerDisplay = document.getElementById("timerDisplay");
+
+            if (!timerDisplay) {
+                return;
+            }
 
             const countdownInterval = setInterval(function() {
                 timeLeft--;
